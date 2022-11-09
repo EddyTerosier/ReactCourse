@@ -1,5 +1,4 @@
 import {useState} from "react"
-import Item from "./Item"
 
 
 function App() {
@@ -7,14 +6,14 @@ function App() {
   // console.log(useState(10));
 
   const [monState, setMonState] = useState(10);
+  const modifyState = () => {
+    setMonState(20);
+  }
   return (
     <div className="App">
-      <h1>Hello app react</h1>
-      <input type="texte" />
-      <br/>
-      {true ? 1000 : "abc"}
-      <Item />
-      {monState}
+      <h1>Hello state : {monState}</h1>
+
+      <button onClick={modifyState}>Change state</button>
     </div>
   );
 }

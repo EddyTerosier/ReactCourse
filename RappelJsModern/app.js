@@ -85,18 +85,18 @@
 
 // DESTRUCTURING
 
-const pays = {
-    nom: "Italie",
-    pop: 60,
-    langue: "Italien",
-    voiture: "Lambo"
-}
+// const pays = {
+//     nom: "Italie",
+//     pop: 60,
+//     langue: "Italien",
+//     voiture: "Lambo"
+// }
 
 // ASSOCIE LES VALEURS DES OBJETS DU TABLEAU AU TABLEAU
 
-const {nom, pop, langue, voiture} = pays;
-console.log(nom, pop, langue, voiture);
+// const {nom, pop, langue, voiture} = pays;
+// console.log(nom, pop, langue, voiture);
 
 // ON STOCK LES PARAMETRES D'UN OBJET SOUS LA FORME D'UNE FONCTION FLECHEE DANS UNE VARIABLE ICI "DATA"
-const data = ({nom}) => nom;
-console.log(data(pays));
+// const data = ({nom}) => nom;
+// console.log(data(pays));

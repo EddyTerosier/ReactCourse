@@ -1,5 +1,5 @@
 import {useState} from "react"
-
+import Item from "./Item";
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
       <h1>Hello state : {monState}</h1>
 
       <button onClick={modifyState}>Change state</button>
+    <Item number={monState}/>
     </div>
   );
 }

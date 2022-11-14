@@ -9,11 +9,18 @@ function App() {
   const modifyState = () => {
     setMonState(20);
   }
+  const [inputData, setInputData] = useState("Eddy le BG");
+  const changeInput = (e) => {
+    // console.log(e);
+    setInputData(e);
+  }
+  console.log(inputData);
   return (
     <div className="App">
       <h1>Hello state : {monState}</h1>
 
       <button onClick={modifyState}>Change state</button>
+      <input type="text" onInput={e => changeInput(e.target.value)} value={inputData} />
     <Item number={monState}/>
     </div>
   );

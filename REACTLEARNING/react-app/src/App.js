@@ -14,16 +14,29 @@ function App() {
     // console.log(e);
     setInputData(e);
   }
-  console.log(inputData);
-  return (
-    <div className="App">
-      <h1>Hello state : {monState}</h1>
+  const [toggle, setToggle] = useState(true)
+  const changeState = () => {
+    setToggle(!toggle)
+  }
+  if(toggle){
+    return (
+      <div className="App">
+        <h1>Le state est true </h1>
+  
+        <button onClick={changeState}>Change state</button>
+      <Item number={monState}/>
+      </div>
+    );
+  } else if (toggle ===false){
+    return (
+      <div className="App">
+      <h1>Le state est false </h1>
 
-      <button onClick={modifyState}>Change state</button>
-      <input type="text" onInput={e => changeInput(e.target.value)} value={inputData} />
-    <Item number={monState}/>
+      <button onClick={changeState}>Change state</button>
     </div>
-  );
+    )
+  }
+
 }
 
 export default App;

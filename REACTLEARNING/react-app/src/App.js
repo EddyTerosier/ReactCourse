@@ -1,27 +1,13 @@
 import { useState } from "react";
-import Item from "./Components/Item/Item";
+import Item from "./Components/Item";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import Form from "./Components/form"
 
 function App() {
-  // console.log(useState(10));
-
-  const [monState, setMonState] = useState(10);
-  const modifyState = () => {
-    setMonState(20);
-  };
-  const [inputData, setInputData] = useState("Eddy le BG");
-  const changeInput = (e) => {
-    // console.log(e);
-    setInputData(e);
-  };
-  const [toggle, setToggle] = useState(true);
-  const changeState = () => {
-    setToggle(!toggle);
-  };
   return (
     <div className="App">
-      <div className={toggle ? "box animated" : "box"}></div>
-      <button onClick={changeState}>Change state</button>
-      <Item number={monState} />
+      <h1 className="text-center mt-3">Todo-List</h1>
+      <Form/>
     </div>
   );
 }
